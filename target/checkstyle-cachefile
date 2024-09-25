@@ -1,0 +1,21 @@
+#Wed Sep 25 19:31:32 EEST 2024
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\Application.java=1727281609183
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\controler\\CharacterController.java=1727281470507
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\dto\\external\\CharacterFullResponseDto.java=1727281253458
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\dto\\external\\CharacterMetadataDto.java=1727187981408
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\dto\\external\\CharacterResponseDto.java=1727281253479
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\dto\\internal\\CharacterDto.java=1727120426841
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\dto\\internal\\CharacterSearchParametersDto.java=1727122337804
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\external\\api\\service\\DbSynchronizationService.java=1727187686084
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\external\\api\\service\\ExternalCharacterService.java=1727281253442
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\external\\api\\service\\GetClient.java=1727281253449
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\external\\api\\service\\impl\\DbSynchronizationServiceImpl.java=1727281609188
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\external\\api\\service\\impl\\ExternalCharacterServiceImpl.java=1727281609192
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\external\\api\\service\\impl\\GetCharactersClientImpl.java=1727281470523
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\mapping\\CharacterMapper.java=1727281253492
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\models\\Character.java=1727281253454
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\repository\\CharacterRepository.java=1727281470515
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\service\\CharacterService.java=1727281609179
+E\:\\Java_projects\\jv-rick-and-morty\\src\\main\\java\\mate\\academy\\rickandmorty\\service\\impl\\CharacterServiceImpl.java=1727281470491
+E\:\\Java_projects\\jv-rick-and-morty\\src\\test\\resources\\application.properties=1727011557652
+configuration*?=95E1807AF64B7CC827C4DFBC71A7E2C99846AA9E

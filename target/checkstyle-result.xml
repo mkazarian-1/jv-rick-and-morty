@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\Application.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\controler\CharacterController.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\dto\external\CharacterFullResponseDto.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\dto\external\CharacterMetadataDto.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\dto\external\CharacterResponseDto.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\dto\internal\CharacterDto.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\dto\internal\CharacterSearchParametersDto.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\external\api\service\DbSynchronizationService.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\external\api\service\ExternalCharacterService.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\external\api\service\GetClient.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\external\api\service\impl\DbSynchronizationServiceImpl.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\external\api\service\impl\ExternalCharacterServiceImpl.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\external\api\service\impl\GetCharactersClientImpl.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\mapping\CharacterMapper.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\models\Character.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\repository\CharacterRepository.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\service\CharacterService.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\java\mate\academy\rickandmorty\service\impl\CharacterServiceImpl.java">
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\target\generated-sources\annotations\mate\academy\rickandmorty\mapping\CharacterMapperImpl.java">
+<error line="10" column="5" severity="error" message="&apos;value&apos; has incorrect indentation level 4, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="11" column="5" severity="error" message="&apos;date&apos; has incorrect indentation level 4, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="12" column="5" severity="error" message="&apos;comments&apos; has incorrect indentation level 4, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="19" column="12" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="19" column="43" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="25" column="32" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="25" column="68" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="26" column="26" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="26" column="56" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="27" column="28" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="27" column="60" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="28" column="28" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="28" column="60" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="35" column="12" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="35" column="32" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="41" column="27" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="41" column="47" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="42" column="35" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="42" column="63" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="43" column="29" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="43" column="51" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="44" column="31" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="44" column="55" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="45" column="31" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="45" column="55" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="51" severity="error" message="Line is longer than 100 characters (found 103)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="52" column="12" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="52" column="34" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="56" column="32" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="56" column="59" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="57" column="26" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="57" column="47" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="58" column="28" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="58" column="51" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="59" column="28" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="59" column="51" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\main\resources\application.properties">
+<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="E:\Java_projects\jv-rick-and-morty\src\test\resources\application.properties">
+</file>
+</checkstyle>
