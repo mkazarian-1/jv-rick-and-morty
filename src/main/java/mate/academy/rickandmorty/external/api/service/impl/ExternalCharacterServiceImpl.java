@@ -1,5 +1,7 @@
 package mate.academy.rickandmorty.external.api.service.impl;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import mate.academy.rickandmorty.dto.external.CharacterResponseDto;
@@ -16,30 +18,33 @@ public class ExternalCharacterServiceImpl implements ExternalCharacterService {
     private final CharacterMapper characterMapper;
 
     @Override
-    public void saveOrUpdate(CharacterResponseDto characterResponseDto) {
-        Optional<Character> characterOptional = characterRepository
-                .findByExternalId(characterResponseDto.externalId())
-                .stream()
-                .findFirst();
+    public void saveOrUpdate(List<CharacterResponseDto> responseDtoList) {
+        List<Character> listToSave = new LinkedList<>();
 
-        if (characterOptional.isEmpty()) {
-            characterRepository.save(
-                    characterMapper.convertFromResponseDto(characterResponseDto));
-        } else {
-            Character character = characterOptional.get();
+        for (CharacterResponseDto responseDto : responseDtoList) {
+            Optional<Character> characterOptional = characterRepository
+                    .findFirstByExternalId(responseDto.getExternalId());
 
-            if (isEqual(characterResponseDto, character)) {
-                return;
+            if (characterOptional.isEmpty()) {
+                listToSave.add(
+                        characterMapper.convertFromResponseDto(responseDto));
+            } else {
+                Character character = characterOptional.get();
+                if (isEqual(responseDto, character)) {
+                    return;
+                }
+
+                Character updateCharacter = characterMapper.convertFromResponseDto(responseDto);
+                updateCharacter.setId(character.getId());
+                listToSave.add(updateCharacter);
             }
-
-            characterMapper.updateCharacterFromResponseDto(characterResponseDto, character);
-            characterRepository.save(character);
         }
+        characterRepository.saveAll(listToSave);
     }
 
     private boolean isEqual(CharacterResponseDto characterResponseDto, Character character) {
-        return characterResponseDto.name().equals(character.getName())
-                && characterResponseDto.gender().equals(character.getGender())
-                && characterResponseDto.status().equals(character.getStatus());
+        return characterResponseDto.getName().equals(character.getName())
+                && characterResponseDto.getGender().equals(character.getGender())
+                && characterResponseDto.getStatus().equals(character.getStatus());
     }
 }

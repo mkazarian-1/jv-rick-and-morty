@@ -7,14 +7,18 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+
 import lombok.RequiredArgsConstructor;
 import mate.academy.rickandmorty.dto.external.CharacterFullResponseDto;
-import mate.academy.rickandmorty.external.api.service.GetClient;
+import mate.academy.rickandmorty.exeption.ConnectionException;
+import mate.academy.rickandmorty.exeption.ConvertException;
+import mate.academy.rickandmorty.external.api.service.CharacterClient;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class GetCharactersClientImpl implements GetClient<CharacterFullResponseDto> {
+public class CharactersClientImpl implements CharacterClient {
     private final ObjectMapper objectMapper;
 
     public CharacterFullResponseDto getDtoFromApi(String url) {
@@ -27,7 +31,7 @@ public class GetCharactersClientImpl implements GetClient<CharacterFullResponseD
         try {
             response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (IOException | InterruptedException e) {
-            throw new RuntimeException("Can't get response from: " + url, e);
+            throw new ConnectionException("Can't get response from: " + url, e);
         }
 
         return convertResponse(response);
@@ -38,7 +42,7 @@ public class GetCharactersClientImpl implements GetClient<CharacterFullResponseD
             return objectMapper.readValue(response.body(),
                     CharacterFullResponseDto.class);
         } catch (JsonProcessingException e) {
-            throw new RuntimeException(
+            throw new ConvertException(
                     "Can't convert response to CharacterFullResponseDto.class", e);
         }
     }

@@ -4,31 +4,35 @@ import lombok.RequiredArgsConstructor;
 import mate.academy.rickandmorty.dto.external.CharacterFullResponseDto;
 import mate.academy.rickandmorty.external.api.service.DbSynchronizationService;
 import mate.academy.rickandmorty.external.api.service.ExternalCharacterService;
-import mate.academy.rickandmorty.external.api.service.GetClient;
+import mate.academy.rickandmorty.external.api.service.CharacterClient;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class DbSynchronizationServiceImpl implements DbSynchronizationService {
-    private final GetClient<CharacterFullResponseDto> getClient;
+    private final CharacterClient characterClient;
     private final ExternalCharacterService externalCharacterService;
 
+    @Value("${mate.academy.rickandmorty.api}")
+    private String RICK_AND_MORTY_API_CHARACTER_URL;
+
     @Override
-    public void synchronize(String url) {
-        CharacterFullResponseDto fullResponseDto = getClient.getDtoFromApi(url);
+    public void synchronize() {
+        CharacterFullResponseDto fullResponseDto = characterClient.getDtoFromApi(RICK_AND_MORTY_API_CHARACTER_URL);
 
         if (fullResponseDto.getResults().isEmpty()) {
             return;
         }
 
         while (true) {
-            fullResponseDto.getResults().forEach(externalCharacterService::saveOrUpdate);
+            externalCharacterService.saveOrUpdate(fullResponseDto.getResults());
 
-            if (fullResponseDto.getInfo().next() == null) {
+            if (fullResponseDto.getInfo().getNext() == null) {
                 break;
             }
 
-            fullResponseDto = getClient.getDtoFromApi(fullResponseDto.getInfo().next());
+            fullResponseDto = characterClient.getDtoFromApi(fullResponseDto.getInfo().getNext());
         }
 
     }

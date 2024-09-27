@@ -1,6 +1,8 @@
 package mate.academy.rickandmorty.service.impl;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+
 import lombok.RequiredArgsConstructor;
 import mate.academy.rickandmorty.dto.internal.CharacterDto;
 import mate.academy.rickandmorty.mapping.CharacterMapper;
@@ -25,6 +27,8 @@ public class CharacterServiceImpl implements CharacterService {
 
     @Override
     public CharacterDto getRandomCharacter() {
-        return characterMapper.convertToDto(characterRepository.findRandomCharacter());
+        return characterMapper.convertToDto(
+                characterRepository.findRandomCharacter()
+                .orElseThrow(() -> new NoSuchElementException("Random character not found")));
     }
 }
